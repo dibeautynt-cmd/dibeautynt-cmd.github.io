@@ -1,13 +1,236 @@
-Trang chủ
-🌸 Logo Di Beauty.
-Ảng banner lớn.
-Tiêu đề: Di Beauty - Chăm Sóc Da Chuyên Nghiệp.
-Nút Đặt lịch ngay.
-Dịch vụ
-Chăm sóc da.
-Điều trị mụn.
-Massage thư giãn.
-Phục hồi da.
-Giới thiệu
-Giới thiệu về Di Beauty.
-Cam kết chất lượng.
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Di Beauty</title>
+
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,Helvetica,sans-serif;
+scroll-behavior:smooth;
+}
+
+body{
+background:#faf8f6;
+color:#333;
+}
+
+header{
+height:100vh;
+background:linear-gradient(rgba(0,0,0,.45),rgba(0,0,0,.45)),
+url("https://images.unsplash.com/photo-1521590832167-7bcbfaa6381f?auto=format&fit=crop&w=1600&q=80");
+background-size:cover;
+background-position:center;
+display:flex;
+justify-content:center;
+align-items:center;
+text-align:center;
+color:white;
+}
+
+header h1{
+font-size:60px;
+margin-bottom:20px;
+}
+
+header p{
+font-size:22px;
+margin-bottom:30px;
+}
+
+.btn{
+display:inline-block;
+padding:15px 35px;
+background:#8B5E3C;
+color:white;
+text-decoration:none;
+border-radius:40px;
+transition:.3s;
+}
+
+.btn:hover{
+background:#6f472b;
+}
+
+nav{
+position:fixed;
+top:0;
+width:100%;
+padding:18px;
+background:white;
+display:flex;
+justify-content:space-between;
+align-items:center;
+box-shadow:0 3px 10px rgba(0,0,0,.1);
+z-index:1000;
+}
+
+.logo{
+font-size:28px;
+font-weight:bold;
+color:#8B5E3C;
+}
+
+nav ul{
+display:flex;
+list-style:none;
+gap:25px;
+}
+
+nav a{
+text-decoration:none;
+color:#333;
+font-weight:bold;
+}
+
+section{
+padding:80px 10%;
+}
+
+.title{
+text-align:center;
+font-size:40px;
+margin-bottom:50px;
+color:#8B5E3C;
+}
+
+.cards{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:30px;
+}
+
+.card{
+background:white;
+padding:30px;
+border-radius:20px;
+box-shadow:0 10px 20px rgba(0,0,0,.08);
+transition:.3s;
+}
+
+.card:hover{
+transform:translateY(-10px);
+}
+
+footer{
+background:#8B5E3C;
+color:white;
+text-align:center;
+padding:30px;
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+<div class="logo">Di Beauty</div>
+
+<ul>
+<li><a href="#home">Trang chủ</a></li>
+<li><a href="#service">Dịch vụ</a></li>
+<li><a href="#about">Giới thiệu</a></li>
+<li><a href="#contact">Liên hệ</a></li>
+</ul>
+
+</nav>
+
+<header id="home">
+
+<div>
+
+<h1>Di Beauty</h1>
+
+<p>Chăm sóc da chuyên nghiệp - Nâng tầm vẻ đẹp của bạn</p>
+
+<a class="btn" href="#service">Khám phá ngay</a>
+
+</div>
+
+</header>
+<section id="service">
+
+<h2 class="title">Dịch vụ</h2>
+
+<div class="cards">
+
+<div class="card">
+<h3>🌸 Chăm sóc da</h3>
+<p>Làm sạch sâu, cấp ẩm và phục hồi làn da khỏe mạnh.</p>
+</div>
+
+<div class="card">
+<h3>✨ Điều trị mụn</h3>
+<p>Liệu trình hỗ trợ giảm mụn và cải thiện tình trạng da.</p>
+</div>
+
+<div class="card">
+<h3>💆 Massage thư giãn</h3>
+<p>Thư giãn cơ mặt và giảm căng thẳng sau ngày dài.</p>
+</div>
+
+<div class="card">
+<h3>💎 Phục hồi da</h3>
+<p>Giúp da sáng khỏe, mềm mịn và đều màu hơn.</p>
+</div>
+
+</div>
+
+</section>
+
+<section id="about">
+
+<h2 class="title">Giới thiệu</h2>
+
+<p style="text-align:center;font-size:20px;max-width:900px;margin:auto;line-height:1.8;">
+Di Beauty mang đến dịch vụ chăm sóc da chuyên nghiệp với tiêu chí
+<b>An toàn - Chất lượng - Tận tâm</b>.
+Chúng tôi luôn mong muốn giúp khách hàng sở hữu làn da khỏe đẹp và tự tin hơn mỗi ngày.
+</p>
+
+</section>
+
+<section id="contact">
+
+<h2 class="title">Liên hệ</h2>
+
+<div class="cards">
+
+<div class="card">
+<h3>📞 Điện thoại</h3>
+<p>Đang cập nhật...</p>
+</div>
+
+<div class="card">
+<h3>📍 Địa chỉ</h3>
+<p>Đang cập nhật...</p>
+</div>
+
+<div class="card">
+<h3>💬 Facebook</h3>
+<p>Đang cập nhật...</p>
+</div>
+
+<div class="card">
+<h3>📱 Zalo</h3>
+<p>Đang cập nhật...</p>
+</div>
+
+</div>
+
+</section>
+
+<footer>
+
+<h2>Di Beauty</h2>
+
+<p>© 2026 - Chăm sóc da chuyên nghiệp</p>
+
+</footer>
+
+</body>
+</html>
