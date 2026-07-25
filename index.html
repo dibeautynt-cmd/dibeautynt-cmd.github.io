@@ -3,194 +3,462 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Di Beauty</title>
+<title>Di Beauty Spa</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
 <style>
+
 *{
 margin:0;
 padding:0;
 box-sizing:border-box;
-font-family:Arial,Helvetica,sans-serif;
+font-family:'Poppins',sans-serif;
+}
+
+html{
 scroll-behavior:smooth;
 }
 
 body{
-background:#faf8f6;
+background:#f8f4ef;
 color:#333;
-}
-
-header{
-height:100vh;
-background:linear-gradient(rgba(0,0,0,.45),rgba(0,0,0,.45)),
-url("https://images.unsplash.com/photo-1521590832167-7bcbfaa6381f?auto=format&fit=crop&w=1600&q=80");
-background-size:cover;
-background-position:center;
-display:flex;
-justify-content:center;
-align-items:center;
-text-align:center;
-color:white;
-}
-
-header h1{
-font-size:60px;
-margin-bottom:20px;
-}
-
-header p{
-font-size:22px;
-margin-bottom:30px;
-}
-
-.btn{
-display:inline-block;
-padding:15px 35px;
-background:#8B5E3C;
-color:white;
-text-decoration:none;
-border-radius:40px;
-transition:.3s;
-}
-
-.btn:hover{
-background:#6f472b;
 }
 
 nav{
+
 position:fixed;
+
 top:0;
+
+left:0;
+
 width:100%;
-padding:18px;
-background:white;
+
+padding:18px 8%;
+
 display:flex;
+
 justify-content:space-between;
+
 align-items:center;
-box-shadow:0 3px 10px rgba(0,0,0,.1);
-z-index:1000;
+
+background:rgba(255,255,255,.95);
+
+backdrop-filter:blur(10px);
+
+box-shadow:0 3px 15px rgba(0,0,0,.08);
+
+z-index:999;
+
 }
 
 .logo{
-font-size:28px;
-font-weight:bold;
-color:#8B5E3C;
+
+font-size:30px;
+
+font-weight:700;
+
+color:#8b5a2b;
+
 }
 
 nav ul{
+
 display:flex;
+
+gap:35px;
+
 list-style:none;
-gap:25px;
+
 }
 
 nav a{
+
 text-decoration:none;
-color:#333;
-font-weight:bold;
+
+font-weight:500;
+
+color:#444;
+
+transition:.3s;
+
+}
+
+nav a:hover{
+
+color:#8b5a2b;
+
+}
+
+.hero{
+
+height:100vh;
+
+background:
+
+linear-gradient(rgba(0,0,0,.45),rgba(0,0,0,.45)),
+
+url("https://images.unsplash.com/photo-1515377905703-c4788e51af15?auto=format&fit=crop&w=1600&q=80");
+
+background-size:cover;
+
+background-position:center;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+text-align:center;
+
+padding:20px;
+
+color:white;
+
+}
+
+.hero h1{
+
+font-size:65px;
+
+margin-bottom:20px;
+
+}
+
+.hero p{
+
+font-size:22px;
+
+margin-bottom:35px;
+
+}
+
+.btn{
+
+display:inline-block;
+
+padding:15px 40px;
+
+background:#8b5a2b;
+
+color:white;
+
+border-radius:40px;
+
+text-decoration:none;
+
+transition:.3s;
+
+}
+
+.btn:hover{
+
+background:#6d4420;
+
+transform:translateY(-4px);
+
 }
 
 section{
-padding:80px 10%;
+
+padding:90px 8%;
+
 }
 
 .title{
+
 text-align:center;
-font-size:40px;
-margin-bottom:50px;
-color:#8B5E3C;
+
+font-size:42px;
+
+margin-bottom:60px;
+
+color:#8b5a2b;
+
 }
 
-.cards{
+.grid{
+
 display:grid;
+
 grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+
 gap:30px;
+
 }
 
 .card{
+
 background:white;
-padding:30px;
-border-radius:20px;
-box-shadow:0 10px 20px rgba(0,0,0,.08);
-transition:.3s;
+
+border-radius:18px;
+
+overflow:hidden;
+
+box-shadow:0 8px 25px rgba(0,0,0,.08);
+
+transition:.35s;
+
 }
 
 .card:hover{
+
 transform:translateY(-10px);
+
 }
 
-footer{
-background:#8B5E3C;
-color:white;
-text-align:center;
-padding:30px;
+.card img{
+
+width:100%;
+
+height:220px;
+
+object-fit:cover;
+
 }
+
+.card h3{
+
+padding:20px;
+
+font-size:24px;
+
+}
+
+.card p{
+
+padding:0 20px 25px;
+
+line-height:1.7;
+
+}
+
+.price{
+
+font-size:24px;
+
+font-weight:bold;
+
+color:#8b5a2b;
+
+padding:0 20px 25px;
+
+}
+
+@media(max-width:768px){
+
+.hero h1{
+
+font-size:42px;
+
+}
+
+nav ul{
+
+display:none;
+
+}
+
+}
+
 </style>
+
 </head>
 
 <body>
 
 <nav>
-<div class="logo">Di Beauty</div>
+
+<div class="logo">
+
+Di Beauty
+
+</div>
 
 <ul>
-<li><a href="#home">Trang chủ</a></li>
+
+<li><a href="#">Trang chủ</a></li>
+
 <li><a href="#service">Dịch vụ</a></li>
+
 <li><a href="#about">Giới thiệu</a></li>
+
 <li><a href="#contact">Liên hệ</a></li>
+
 </ul>
 
 </nav>
 
-<header id="home">
+<header class="hero">
 
 <div>
 
-<h1>Di Beauty</h1>
+<h1>DI BEAUTY</h1>
 
-<p>Chăm sóc da chuyên nghiệp - Nâng tầm vẻ đẹp của bạn</p>
+<p>Chăm sóc da chuyên nghiệp • An toàn • Chuẩn Spa</p>
 
-<a class="btn" href="#service">Khám phá ngay</a>
+<a href="#service" class="btn">Đặt lịch ngay</a>
 
 </div>
 
 </header>
 <section id="service">
 
-<h2 class="title">Dịch vụ</h2>
+<h2 class="title">Dịch vụ nổi bật</h2>
 
-<div class="cards">
+<div class="grid">
 
 <div class="card">
-<h3>🌸 Chăm sóc da</h3>
-<p>Làm sạch sâu, cấp ẩm và phục hồi làn da khỏe mạnh.</p>
+<img src="https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?auto=format&fit=crop&w=800&q=80">
+<h3>Chăm sóc da cơ bản</h3>
+<p>Làm sạch sâu, cấp ẩm, giúp làn da khỏe mạnh và sáng mịn.</p>
+<div class="price">299.000đ</div>
 </div>
 
 <div class="card">
-<h3>✨ Điều trị mụn</h3>
-<p>Liệu trình hỗ trợ giảm mụn và cải thiện tình trạng da.</p>
+<img src="https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?auto=format&fit=crop&w=800&q=80">
+<h3>Điều trị mụn</h3>
+<p>Liệu trình hỗ trợ giảm mụn, hạn chế thâm và phục hồi da.</p>
+<div class="price">499.000đ</div>
 </div>
 
 <div class="card">
-<h3>💆 Massage thư giãn</h3>
-<p>Thư giãn cơ mặt và giảm căng thẳng sau ngày dài.</p>
+<img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=800&q=80">
+<h3>Massage thư giãn</h3>
+<p>Giảm căng thẳng, tăng tuần hoàn máu và thư giãn cơ mặt.</p>
+<div class="price">350.000đ</div>
 </div>
 
 <div class="card">
-<h3>💎 Phục hồi da</h3>
-<p>Giúp da sáng khỏe, mềm mịn và đều màu hơn.</p>
+<img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=800&q=80">
+<h3>Phục hồi da</h3>
+<p>Phục hồi hàng rào bảo vệ da sau mụn hoặc sau điều trị.</p>
+<div class="price">650.000đ</div>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=800&q=80">
+<h3>Trẻ hóa da</h3>
+<p>Cải thiện độ đàn hồi, giảm nếp nhăn và giúp da săn chắc.</p>
+<div class="price">890.000đ</div>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=800&q=80">
+<h3>Tắm trắng</h3>
+<p>Dưỡng sáng da với quy trình nhẹ nhàng, phù hợp nhiều loại da.</p>
+<div class="price">999.000đ</div>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=800&q=80">
+<h3>Peel da</h3>
+<p>Hỗ trợ tái tạo bề mặt da và cải thiện tình trạng da không đều màu.</p>
+<div class="price">790.000đ</div>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1521572267360-ee0c2909d518?auto=format&fit=crop&w=800&q=80">
+<h3>Combo VIP</h3>
+<p>Gói chăm sóc toàn diện giúp tiết kiệm chi phí và thời gian.</p>
+<div class="price">1.990.000đ</div>
+</div>
+
+</div>
+
+</section>
+<section id="about">
+
+<h2 class="title">Về Di Beauty</h2>
+
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(350px,1fr));gap:40px;align-items:center;">
+
+<div>
+
+<img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=900&q=80"
+style="width:100%;border-radius:20px;box-shadow:0 10px 25px rgba(0,0,0,.15);">
+
+</div>
+
+<div>
+
+<h2 style="color:#8b5a2b;font-size:38px;margin-bottom:20px;">
+Di Beauty Spa
+</h2>
+
+<p style="line-height:1.9;font-size:18px;margin-bottom:20px;">
+
+Di Beauty mang đến các liệu trình chăm sóc da hiện đại,
+không gian thư giãn và đội ngũ kỹ thuật viên tận tâm.
+
+</p>
+
+<p style="line-height:1.9;font-size:18px;">
+
+✔ Không gian sang trọng<br>
+✔ Thiết bị hiện đại<br>
+✔ Mỹ phẩm chính hãng<br>
+✔ Tư vấn miễn phí
+
+</p>
+
 </div>
 
 </div>
 
 </section>
 
-<section id="about">
+<section>
 
-<h2 class="title">Giới thiệu</h2>
+<h2 class="title">Khách hàng nói gì?</h2>
 
-<p style="text-align:center;font-size:20px;max-width:900px;margin:auto;line-height:1.8;">
-Di Beauty mang đến dịch vụ chăm sóc da chuyên nghiệp với tiêu chí
-<b>An toàn - Chất lượng - Tận tâm</b>.
-Chúng tôi luôn mong muốn giúp khách hàng sở hữu làn da khỏe đẹp và tự tin hơn mỗi ngày.
+<div class="grid">
+
+<div class="card">
+<div style="padding:30px;">
+⭐⭐⭐⭐⭐
+<p style="margin-top:20px;">
+"Dịch vụ rất tốt, nhân viên nhiệt tình và da mình cải thiện rõ sau vài buổi."
 </p>
+
+<h3 style="padding:15px 0 0;">
+Nguyễn Lan
+</h3>
+</div>
+</div>
+
+<div class="card">
+<div style="padding:30px;">
+⭐⭐⭐⭐⭐
+<p style="margin-top:20px;">
+"Không gian đẹp, sạch sẽ và cực kỳ thư giãn."
+</p>
+
+<h3 style="padding:15px 0 0;">
+Minh Anh
+</h3>
+</div>
+</div>
+
+<div class="card">
+<div style="padding:30px;">
+⭐⭐⭐⭐⭐
+<p style="margin-top:20px;">
+"Mình sẽ quay lại và giới thiệu bạn bè."
+</p>
+
+<h3 style="padding:15px 0 0;">
+Thanh Huyền
+</h3>
+</div>
+</div>
+
+</div>
 
 </section>
 
@@ -198,39 +466,42 @@ Chúng tôi luôn mong muốn giúp khách hàng sở hữu làn da khỏe đẹ
 
 <h2 class="title">Liên hệ</h2>
 
-<div class="cards">
+<div style="background:white;padding:40px;border-radius:20px;box-shadow:0 10px 25px rgba(0,0,0,.08);text-align:center;">
 
-<div class="card">
-<h3>📞 Điện thoại</h3>
-<p>Đang cập nhật...</p>
-</div>
+<h2 style="color:#8b5a2b;">Di Beauty Spa</h2>
 
-<div class="card">
-<h3>📍 Địa chỉ</h3>
-<p>Đang cập nhật...</p>
-</div>
+<p style="margin-top:20px;font-size:18px;">
+📍 Địa chỉ: Đang cập nhật
+</p>
 
-<div class="card">
-<h3>💬 Facebook</h3>
-<p>Đang cập nhật...</p>
-</div>
+<p style="margin-top:10px;font-size:18px;">
+📞 Hotline: 09xxxxxxxx
+</p>
 
-<div class="card">
-<h3>📱 Zalo</h3>
-<p>Đang cập nhật...</p>
+<p style="margin-top:10px;font-size:18px;">
+📧 Email: dibeauty@gmail.com
+</p>
+
+<div style="margin-top:30px;">
+
+<a class="btn" href="#">Đặt lịch ngay</a>
+
 </div>
 
 </div>
 
 </section>
 
-<footer>
+<footer style="background:#8b5a2b;color:white;text-align:center;padding:40px;">
 
 <h2>Di Beauty</h2>
 
-<p>© 2026 - Chăm sóc da chuyên nghiệp</p>
+<p style="margin-top:15px;">
+© 2026 Di Beauty Spa. All Rights Reserved.
+</p>
 
 </footer>
 
 </body>
+
 </html>
