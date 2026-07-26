@@ -391,3 +391,48 @@ transform:translateY(0);
     padding-left:28px;
 
 }
+/* ==========================
+   HERO INFO
+========================== */
+
+.hero-info{
+
+    margin-top:60px;
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:60px;
+
+}
+
+.hero-info div{
+
+    background:rgba(255,255,255,.12);
+
+    backdrop-filter:blur(12px);
+
+    border:1px solid rgba(255,255,255,.2);
+
+    padding:25px 35px;
+
+    border-radius:20px;
+
+    text-align:center;
+
+}
+
+.hero-info h3{
+
+    color:#fff;
+
+    font-size:34px;
+
+}
+
+.hero-info span{
+
+    color:#eee;
+
+}
