@@ -1,1 +1,320 @@
+/* =========================================
+   DI BEAUTY - STYLE
+========================================= */
 
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+    background:#FFF8F2;
+    color:#333;
+}
+
+/* =======================
+    CONTAINER
+======================= */
+
+.container{
+    width:90%;
+    max-width:1200px;
+    margin:auto;
+}
+
+/* =======================
+    HEADER
+======================= */
+
+header{
+
+    position:fixed;
+
+    top:0;
+
+    left:0;
+
+    width:100%;
+
+    z-index:999;
+
+    transition:.4s;
+
+    padding:18px 0;
+
+}
+
+header .container{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+}
+
+/* =======================
+    LOGO
+======================= */
+
+.logo img{
+
+    width:85px;
+
+    transition:.3s;
+
+}
+
+.logo img:hover{
+
+    transform:scale(1.08);
+
+}
+
+/* =======================
+    MENU
+======================= */
+
+nav ul{
+
+    display:flex;
+
+    gap:40px;
+
+    list-style:none;
+
+}
+
+nav ul li a{
+
+    color:white;
+
+    text-decoration:none;
+
+    font-size:16px;
+
+    font-weight:500;
+
+    position:relative;
+
+    transition:.3s;
+
+}
+
+/* Gạch vàng chạy */
+
+nav ul li a::after{
+
+    content:"";
+
+    position:absolute;
+
+    left:0;
+
+    bottom:-8px;
+
+    width:0;
+
+    height:2px;
+
+    background:#C89B3C;
+
+    transition:.35s;
+
+}
+
+nav ul li a:hover::after{
+
+    width:100%;
+
+}
+
+nav ul li a:hover{
+
+    color:#F3D38A;
+
+}
+
+/* =======================
+    BUTTON
+======================= */
+
+.btn{
+
+    background:#C89B3C;
+
+    color:white;
+
+    text-decoration:none;
+
+    padding:14px 28px;
+
+    border-radius:50px;
+
+    transition:.35s;
+
+    font-weight:600;
+
+}
+
+.btn:hover{
+
+    transform:translateY(-4px);
+
+    box-shadow:0 18px 30px rgba(200,155,60,.35);
+
+}
+
+/* =======================
+    HERO
+======================= */
+
+.hero{
+
+    height:100vh;
+
+    background:url("images/hero.jpg") center/cover no-repeat;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    position:relative;
+
+}
+
+.overlay{
+
+    position:absolute;
+
+    inset:0;
+
+    background:rgba(0,0,0,.45);
+
+}
+
+.hero-content{
+
+    position:relative;
+
+    z-index:2;
+
+    text-align:center;
+
+    color:white;
+
+}
+
+.hero-logo{
+
+    width:170px;
+
+    margin-bottom:25px;
+
+    animation:float 3s infinite ease-in-out;
+
+}
+
+.hero h1{
+
+    font-size:58px;
+
+    margin-bottom:20px;
+
+}
+
+.hero p{
+
+    width:700px;
+
+    max-width:90%;
+
+    margin:auto;
+
+    line-height:1.8;
+
+}
+
+/* =======================
+    HERO BUTTON
+======================= */
+
+.hero-button{
+
+    margin-top:45px;
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:20px;
+
+}
+
+.hero-button a{
+
+    text-decoration:none;
+
+    padding:16px 36px;
+
+    border-radius:50px;
+
+    transition:.35s;
+
+}
+
+.hero-button a:first-child{
+
+    background:#C89B3C;
+
+    color:white;
+
+}
+
+.hero-button a:last-child{
+
+    border:2px solid white;
+
+    color:white;
+
+}
+
+.hero-button a:hover{
+
+    transform:translateY(-5px);
+
+}
+
+/* =======================
+    ANIMATION
+======================= */
+
+@keyframes float{
+
+0%{
+
+transform:translateY(0);
+
+}
+
+50%{
+
+transform:translateY(-10px);
+
+}
+
+100%{
+
+transform:translateY(0);
+
+}
+}
