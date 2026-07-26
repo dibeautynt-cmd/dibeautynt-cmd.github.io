@@ -1,1 +1,0 @@
-# dibeautynt-cmd.github.io
